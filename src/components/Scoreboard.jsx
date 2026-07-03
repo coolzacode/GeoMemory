@@ -1,9 +1,9 @@
-export default function Scoreboard() {
+export default function Scoreboard({ score }) {
   return (
     <>
       <header className="scoreboard">
         <h1>
-          Score: <span>3</span>
+          Score: <span>{score}</span>
         </h1>
         <h1>
           Best Score: <span>12</span>

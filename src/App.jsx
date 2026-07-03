@@ -5,6 +5,7 @@ import Gameboard from "./components/Gameboard.jsx";
 
 function App() {
   const [clickedCountries, setClickedCountries] = useState([]);
+  const score = clickedCountries.length;
 
   const countryData = [
     { name: "United States", emoji: "🇺🇸" },
@@ -14,9 +15,10 @@ function App() {
   ];
   return (
     <>
-      <Scoreboard />
+      <Scoreboard score={score} />
       <Gameboard
         countryData={countryData}
+        clickedCountries={clickedCountries}
         setClickedCountries={setClickedCountries}
       />
     </>

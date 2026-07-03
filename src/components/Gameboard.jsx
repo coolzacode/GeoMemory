@@ -1,8 +1,16 @@
 import Card from "./Card.jsx";
 
-export default function Gameboard({ countryData, setClickedCountries }) {
+export default function Gameboard({
+  countryData,
+  clickedCountries,
+  setClickedCountries,
+}) {
   function updateList(name) {
-    setClickedCountries((prev) => [...prev, name]);
+    if (!clickedCountries.includes(name)) {
+      setClickedCountries((prev) => [...prev, name]);
+    } else {
+      setClickedCountries([]);
+    }
   }
 
   return (
