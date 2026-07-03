@@ -5,17 +5,21 @@ import Gameboard from "./components/Gameboard.jsx";
 
 function App() {
   const [clickedCountries, setClickedCountries] = useState([]);
+  const [bestScore, setBestScore] = useState(0);
   const score = clickedCountries.length;
-
   const countryData = [
     { name: "United States", emoji: "🇺🇸" },
     { name: "Canada", emoji: "🇨🇦" },
     { name: "Mexico", emoji: "🇲🇽" },
     { name: "United Kingdom", emoji: "🇬🇧" },
   ];
+
+  if (score > bestScore) {
+    setBestScore(score);
+  }
   return (
     <>
-      <Scoreboard score={score} />
+      <Scoreboard score={score} bestScore={bestScore} />
       <Gameboard
         countryData={countryData}
         clickedCountries={clickedCountries}
