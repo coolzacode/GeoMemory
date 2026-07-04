@@ -37,6 +37,11 @@ function App() {
     <>
       <Scoreboard score={score} bestScore={bestScore} />
       <Gameboard countryData={countryData} onCardClick={handleCardClick} />
+      <div className="directions">
+        <p>
+          Directions: Click all 12 countries without picking the same one twice.
+        </p>
+      </div>
     </>
   );
 }

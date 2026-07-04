@@ -1,5 +1,15 @@
+/* --- Global Variables & Reset --- */
+:root {
+  --background-color: #f0f2f5;
+  --card-color: #ffffff;
+  --text-color: #333333;
+  --accent-color: #2e7d32;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 20px;
+  background-color: var(--background-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
 }
